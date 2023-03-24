@@ -7,7 +7,7 @@ export default function ProjectItem({data}) {
 
   const title = data.properties.Name.title[0].plain_text;
   const types = data.properties.Type.multi_select;
-  const url = data.url;
+  const url = data.properties.LectureLink.url;
   const imgSrc = data.cover.file?.url || data.cover.external.url;
   console.log(url);
 
