@@ -14,9 +14,12 @@ export default function Projects({ projects }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        {projects.results.map((aProject) => (
-          <ProjectItem key={aProject.id} data={aProject}/>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 py-10 m-6 gap-5 sm:w-full">
+          {projects.results.map((aProject) => (
+            <ProjectItem key={aProject.id} data={aProject}/>
+          ))}
+        </div>
+
       </Layout>
     </>
   );
